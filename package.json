@@ -1,0 +1,27 @@
+{
+  "name": "blockchain-land-records",
+  "version": "1.0.0",
+  "description": "Land Records on blockchain using smartcontracts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donank/blockchain-land-records.git"
+  },
+  "keywords": [
+    "Blockchain",
+    "Land",
+    "Records",
+    "Ethereum",
+    "Smart",
+    "Contracts"
+  ],
+  "author": "DonAnk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/donank/blockchain-land-records/issues"
+  },
+  "homepage": "https://github.com/donank/blockchain-land-records#readme"
+}
