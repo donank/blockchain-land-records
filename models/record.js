@@ -10,7 +10,7 @@ var RecordSchema = new Schema(
         current_owner_unique_id : { type : String },
         nonce : { type : Number },
         sold_price : { type : Number },
-        total_area : { type : SchemaTypes.Double}
+        total_area : { type : Number }
     }
 )
 
