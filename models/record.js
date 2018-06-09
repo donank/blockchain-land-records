@@ -4,12 +4,12 @@ var Schema = mongoose.Schema;
 
 var RecordSchema = new Schema(
     {
-        old_owner_name : { type : String },
-        old_owner_unique_id : { type : String },
+        old_owner_name : { type : String, default : "NA" },
+        old_owner_unique_id : { type : String, default : "NA" },
         current_owner_name : { type : String },
         current_owner_unique_id : { type : String },
         nonce : { type : Number },
-        sold_price : { type : Number },
+        sell_price : { type : Number },
         total_area : { type : Number }
     }
 )
