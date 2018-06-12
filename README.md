@@ -1,5 +1,7 @@
 # Land Records on Blockchain
 
+[![Build Status](https://travis-ci.org/donank/blockchain-land-records.svg?branch=master)](https://travis-ci.org/donank/blockchain-land-records)
+
 Experimental system for storing land records on public blockchains using smart contracts
 
 Each land owner has a public record of their land stored on a public blockchain. Through Public Key Cryptography, Each owner has complete control on modifications of the data about his/her land on the chain. Any modification like change in ownership has to be signed by the current land record owner. These land record contracts can be approved by the governments and the fees charged for data modifications can be used as tax savings which should obvioulsy be approved by the governing bodies.
