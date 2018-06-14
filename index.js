@@ -8,8 +8,8 @@ var http = require('http'),
     errorhandler = require('errorhandler'),
     mongoose = require('mongoose'),
     recordRouter = require('./routes/record')
-    indexRouter = require('./routes/index')
-    
+    indexRouter = require('./routes/index');
+
 var app = express();
 
 app.use(cors());
