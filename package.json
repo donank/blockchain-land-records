@@ -4,7 +4,7 @@
   "description": "Land Records on blockchain using smartcontracts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jshint index.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/donank/blockchain-land-records/issues"
   },
-  "homepage": "https://github.com/donank/blockchain-land-records#readme"
+  "homepage": "https://github.com/donank/blockchain-land-records#readme",
+  "devDependencies": {
+    "jshint": "^2.9.5"
+  }
 }
