@@ -7,7 +7,7 @@ var http = require('http'),
     cors = require('cors'),
     errorhandler = require('errorhandler'),
     mongoose = require('mongoose'),
-    recordRouter = require('./routes/record')
+    recordRouter = require('./routes/record'),
     indexRouter = require('./routes/index');
 
 var app = express();
@@ -19,8 +19,8 @@ app.use(require('method-override')());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/', indexRouter)
-app.use('/record',recordRouter)
+app.use('/', indexRouter);
+app.use('/record',recordRouter);
 
 var server = app.listen( process.env.PORT || 3000, function(){
     console.log('Listening on port ' + server.address().port);
