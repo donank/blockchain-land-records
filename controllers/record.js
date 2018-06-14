@@ -12,7 +12,7 @@ var ipfs = ipfsAPI('localhost', '5001', { protocol: 'http' });
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
-router.post('/save', (req, res) => {
+exports.save_record = function(req, res){
 
     var record = new Record({
         old_owner_name: req.body.old_owner_name,
@@ -26,16 +26,20 @@ router.post('/save', (req, res) => {
 
     var content = JSON.stringify(record);
     console.log(content);
-    
+
     fs.writeFile(`/tmp/${record.current_owner_unique_id}.json`, content, 'utf8', (err) => {
         if (err) {
             return console.log("Error while sving file locally." + err);
         }
         console.log("The file was saved locally!");
 
+        const rs = new ReadableStream()
+        rs.add(Buffer.from(content))
+        rs.add(null)
+
         var data = [{
             path: `/tmp/${record.current_owner_unique_id}.json`,
-            content: ''
+            content: rs
         }]
 
         ipfs.add(data, (err, data) => {
@@ -48,10 +52,9 @@ router.post('/save', (req, res) => {
 
     });
 
-});
+};
 
-router.post('/publish', (req, res) => {
+exports.publish_record = function (req, res) {
 
-});
+};
 
-module.exports = router;
