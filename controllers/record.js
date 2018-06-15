@@ -33,13 +33,9 @@ exports.save_record = function(req, res){
         }
         console.log("The file was saved locally!");
 
-        const rs = new ReadableStream()
-        rs.add(Buffer.from(content))
-        rs.add(null)
-
         var data = [{
             path: `/tmp/${record.current_owner_unique_id}.json`,
-            content: rs
+            content: Buffer.from(content)
         }]
 
         ipfs.add(data, (err, data) => {
@@ -47,7 +43,7 @@ exports.save_record = function(req, res){
                 return console.log("Error while saving file to ipfs." + err);
             }
             console.log("The file was saved to ipfs!");
-            res.send(data[0].hash)
+            res.send(JSON.stringify(data[0].hash));
         });
 
     });
