@@ -4,7 +4,7 @@
   "description": "Land Records on blockchain using smartcontracts",
   "main": "index.js",
   "scripts": {
-    "test": "jshint index.js && mocha"
+    "test": "jshint index.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "express": "^4.16.3",
+    "ipfs-api": "^22.0.2",
     "mongoose": "^5.1.5"
   }
 }
