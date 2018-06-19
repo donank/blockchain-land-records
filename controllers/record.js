@@ -50,7 +50,4 @@ exports.save_record = function(req, res){
 
 };
 
-exports.publish_record = function (req, res) {
-
-};
 
