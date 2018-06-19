@@ -42,11 +42,8 @@ exports.publish_record = function (req, res) {
     let compiledContract = solc.compile(source);
     console.log("Contract Compiled");
 
-    for (let contractName in compiledContract.contracts) {
-        
-        var bytecode = compiledContract.contracts[contractName].bytecode;
-        var abi = JSON.parse(compiledContract.contracts[contractName].interface);
-    }
+    var bytecode = compiledContract.contracts['record'].bytecode;
+    var abi = JSON.parse(compiledContract.contracts['record'].interface);
 
     let gasEstimate = web3.eth.estimateGas({data: '0x' + bytecode});
 
